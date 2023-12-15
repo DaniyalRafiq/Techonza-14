@@ -1136,6 +1136,7 @@ h4 {
     overflow: hidden;
     border: 1px solid transparent;
     width: 100%;
+    box-shadow: 0 0 5px #0001;
 }
 
 .contact_field input,

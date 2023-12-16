@@ -271,7 +271,7 @@ figure img {
     background: var(--secondary-500);
     color: var(--white);
     border-radius: 0;
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
     position: relative;
 }
 
@@ -389,7 +389,7 @@ h4 {
 }
 
 .main_heading h4 {
-    font-size: 25px;
+    font-size: clamp(23px, 2.5vw, 25px);
     font-family: var(--font-600);
     text-transform: capitalize;
     -webkit-line-clamp: 2;
@@ -446,7 +446,7 @@ h4 {
     display: inline-flex;
     align-items: center;
     line-height: 1;
-    font-size: 15px;
+    font-size: clamp(13px, 2.5vw, 15px);
     font-family: var(--Rubik-font-500);
     text-transform: uppercase;
     position: relative;
@@ -512,7 +512,7 @@ h4 {
     position: fixed;
     bottom: 10px;
     right: 30px;
-    font-size: 20px;
+    font-size: clamp(18px, 2.5vw, 20px);
     border-radius: 6px;
     z-index: 99;
     color: var(--white);
@@ -554,7 +554,7 @@ h4 {
 }
 
 .about_us_content p {
-    font-size: 15px;
+    font-size: clamp(13px, 2.5vw, 15px);
 }
 
 /* ==========AbooutEnd==========*/
@@ -575,7 +575,7 @@ h4 {
 }
 
 .blog_card_content h4 {
-    font-size: 19px;
+    font-size: clamp(16px, 2.5vw, 19px);
     font-family: var(--font-600);
     /* word-break: unset; */
 }
@@ -597,7 +597,7 @@ h4 {
     background: linear-gradient(to right, var(--primary-100) 0%, var(--primary-200) 85%);
     border-radius: 10px;
     color: white;
-    font-size: 14px;
+    font-size: clamp(13px, 2.5vw, 14px);
     left: 10px;
     z-index: 2;
 }
@@ -621,7 +621,7 @@ h4 {
 }
 
 .aurtor h4 {
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
     color: var(--black);
     font-family: var(--Rubik-font-600);
 }
@@ -682,12 +682,12 @@ h4 {
 }
 
 .single_category_main_card_content h4 {
-    font-size: 24px;
+    font-size: clamp(22px, 2.5vw, 24px);
     font-family: var(--font-500);
 }
 
 .single_category_main_card_content>p {
-    font-size: 15px;
+    font-size: clamp(13px, 2.5vw, 15px);
     color: gray;
 }
 
@@ -737,7 +737,7 @@ h4 {
     left: 50%;
     transform: translateX(-50%);
     padding: 4px 10px;
-    font-size: 17px;
+    font-size: clamp(15px, 2.5vw, 17px);
     border-radius: 4px;
     line-height: 1.1;
     background: rgba(255, 255, 255, 0.30);
@@ -776,7 +776,7 @@ h4 {
 }
 
 .sidebar_heading>h4 {
-    font-size: 20px;
+    font-size: clamp(18px, 2.5vw, 20px);
     font-family: var(--font-600);
     border-radius: 5px;
     color: black;
@@ -819,7 +819,7 @@ h4 {
 
     border-radius: 5px;
 
-    font-size: 17px;
+    font-size: clamp(15px, 2.5vw, 17px);
 
     font-family: var(--Rubik-font-600);
 
@@ -875,7 +875,7 @@ h4 {
 
 
 .side_social_content i {
-    font-size: 24px;
+    font-size: clamp(22px, 2.5vw, 24px);
     color: white;
     z-index: 2;
 }
@@ -895,7 +895,7 @@ h4 {
 }
 
 .side_social_content span {
-    font-size: 15px;
+    font-size: clamp(13px, 2.5vw, 15px);
     font-family: var(--Rubik-font-600);
     color: white;
     z-index: 2;
@@ -931,8 +931,9 @@ h4 {
     padding: 2px 12px;
     border: 1px solid #0003;
     color: gray;
-    border-radius: 2px;
+    border-radius: 6px;
     background: var(--white);
+    font-size: clamp(14px, 2.5vw, 15px);
 }
 
 .sidebar_tag:hover {
@@ -956,7 +957,7 @@ h4 {
 }
 
 .sidebar_card .blog_card_content h4 {
-    font-size: 17px;
+    font-size: clamp(15px, 2.5vw, 17px);
 }
 
 .sidebar_card .blog_card_content {
@@ -985,12 +986,13 @@ h4 {
 }
 
 .sidebar_cate_card {
-    height: 123.5px !important;
+    height: 113.5px !important;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
     position: relative;
     display: flex;
     height: 100%;
+    flex-direction: column;
 }
 
 .sidebar_cate_card figure {
@@ -999,20 +1001,19 @@ h4 {
 }
 
 .sidebar_cate_card h4 {
-    position: absolute;
-    bottom: 0;
-    color: white;
+    background: #f9fafd;
     text-align: center;
-    font-size: 17px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 4px 5px;
+    font-size: clamp(13px, 2.5vw, 15px);
+    padding: 2px 0;
     border-radius: 0;
-    border-top: 1px solid var(--primary-50);
-    word-break: break-all;
-    width: 100%;
+    width: 90%;
     transition: .3s;
-    font-family: var(--Rubik-font-500);
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translatex(-50%);
+    border-radius: 5px;
+    word-break: break-all;
 }
 
 .sidebar_cate_card:hover img {
@@ -1051,7 +1052,7 @@ h4 {
 }
 
 .contact_side_item_heading h4 {
-    font-size: 21px;
+    font-size: clamp(19px, 2.5vw, 21px);
     font-family: var(--font-600);
 }
 
@@ -1060,7 +1061,7 @@ h4 {
 }
 
 .contact_main_heading h4 {
-    font-size: 25px;
+    font-size: clamp(23px, 2.5vw, 25px);
     font-family: var(--font-700);
 }
 
@@ -1090,7 +1091,7 @@ h4 {
     background: var(--primary-500);
     border-radius: 50px;
     color: white;
-    font-size: 20px;
+    font-size: clamp(18px, 2.5vw, 20px);
     box-shadow: var(--box-shadow);
     position: relative;
 }
@@ -1102,12 +1103,12 @@ h4 {
 }
 
 .contact_social span {
-    font-size: 15px;
+    font-size: clamp(13px, 2.5vw, 15px);
     color: gray;
 }
 
 .contact_side_item p {
-    font-size: 14px;
+    font-size: clamp(13px, 2.5vw, 14px);
     color: #858585;
 }
 
@@ -1177,7 +1178,7 @@ h4 {
 }
 
 .contact_btn.theme_btn span {
-    font-size: 15px;
+    font-size: clamp(13px, 2.5vw, 15px);
     font-family: var(--font-600);
 }
 
@@ -1240,7 +1241,7 @@ a.alphabet.all_alphabet {
     width: 100%;
     background: #fbfbfb;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
     color: var(--black);
 }
 
@@ -1250,7 +1251,7 @@ a.alphabet.all_alphabet {
 }
 
 .filter_heading h4 {
-    font-size: 24px;
+    font-size: clamp(22px, 2.5vw, 24px);
     font-family: var(--font-600);
     text-transform: capitalize;
 }
@@ -1321,7 +1322,7 @@ a.alphabet.all_alphabet {
 }
 
 .store_heading h4 {
-    font-size: 22px;
+    font-size: clamp(20px, 2.5vw, 22px);
     color: gray;
     font-family: var(--font-500);
 }
@@ -1335,7 +1336,7 @@ a.alphabet.all_alphabet {
 }
 
 .store_card_title h4 {
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
     color: var(--black);
     font-family: var(--font-500);
 }
@@ -1399,7 +1400,7 @@ a.alphabet.all_alphabet {
 }
 
 .not-found h4 {
-    font-size: 20px;
+    font-size: clamp(18px, 2.5vw, 20px);
     color: gray;
     font-family: var(--font-500);
 }
@@ -1515,7 +1516,7 @@ a.alphabet.all_alphabet {
 
 .footer_content p {
     color: #c7c7c7;
-    font-size: 14px;
+    font-size: clamp(13px, 2.5vw, 14px);
 }
 
 .footer_content.footer_logo_main {
@@ -1525,7 +1526,7 @@ a.alphabet.all_alphabet {
 }
 
 .footer_content>h4 {
-    font-size: 22px;
+    font-size: clamp(20px, 2.5vw, 22px);
     color: var(--white);
     font-family: var(--font-500);
 }
@@ -1539,7 +1540,7 @@ a.alphabet.all_alphabet {
 
 .footer_link li a {
     color: #bdbdbd;
-    font-size: 14px;
+    font-size: clamp(13px, 2.5vw, 14px);
 }
 
 .footer_link li {
@@ -1604,7 +1605,7 @@ a.alphabet.all_alphabet {
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 20px;
+    font-size: clamp(18px, 2.5vw, 20px);
     background-size: 200% auto;
     transition: .3s;
 }
@@ -1624,7 +1625,7 @@ a.alphabet.all_alphabet {
 
 .footer_contact {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     border-radius: 5px;
 }
 
@@ -1633,7 +1634,7 @@ a.alphabet.all_alphabet {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 37px;
+    font-size: clamp(30px, 2.5vw, 37px);
     color: var(--secondary-800);
     position: relative;
     filter: drop-shadow(2px 4px 3px #0005);
@@ -1651,7 +1652,7 @@ a.alphabet.all_alphabet {
 
 .footer_contact_content span {
     color: #dbdbdb;
-    font-size: 14px;
+    font-size: clamp(13px, 2.5vw, 14px);
 }
 
 .footer_blog_card {
@@ -1675,7 +1676,7 @@ a.alphabet.all_alphabet {
 }
 
 .footer_blog_card .blog_card_content h4 {
-    font-size: 17px;
+    font-size: clamp(15px, 2.5vw, 17px);
     color: white;
 }
 
@@ -1769,12 +1770,12 @@ a.alphabet.all_alphabet {
 }
 
 .coupon_card_img_content h4 {
-    font-size: 18px;
+    font-size: clamp(15px, 2.5vw, 18px);
     font-family: var(--font-500);
 }
 
 .coupon_card_img_content p {
-    font-size: 14px;
+    font-size: clamp(13px, 2.5vw, 14px);
     color: #838383;
 }
 
@@ -1803,7 +1804,7 @@ a.alphabet.all_alphabet {
 }
 
 .coupon_tag span {
-    font-size: 14px;
+    font-size: clamp(13px, 2.5vw, 14px);
     color: #8d8d8d;
 }
 
@@ -1876,7 +1877,7 @@ a.alphabet.all_alphabet {
 
 .offer span {
     color: #b5b5b5;
-    font-size: 14px;
+    font-size: clamp(13px, 2.5vw, 14px);
 }
 
 .coupoun_btn.deal {
@@ -2053,7 +2054,7 @@ a.alphabet.all_alphabet {
     margin: 15px 0;
     line-height: 1.4;
     color: gray;
-    font-size: 15px;
+    font-size: clamp(13px, 2.5vw, 15px);
 }
 
 .accordion-header:where(.active, :hover) .icon {
@@ -2138,7 +2139,7 @@ a.alphabet.all_alphabet {
 }
 
 .modal_title h4 {
-    font-size: 19px;
+    font-size: clamp(16px, 2.5vw, 19px);
     color: var(--black);
     font-family: var(--font-500);
 }
@@ -2212,7 +2213,7 @@ a.alphabet.all_alphabet {
 }
 
 .add {
-    font-size: 14px;
+    font-size: clamp(13px, 2.5vw, 14px);
     font-weight: 600;
     text-transform: capitalize;
     display: flex;
@@ -2264,7 +2265,7 @@ a.alphabet.all_alphabet {
 }
 
 .about_coupon p {
-    font-size: 14px;
+    font-size: clamp(13px, 2.5vw, 14px);
 }
 
 .modal_title {
@@ -2353,7 +2354,7 @@ a.alphabet.all_alphabet {
 
 .store-verify__tag p {
     color: #999999;
-    font-size: 14px;
+    font-size: clamp(13px, 2.5vw, 14px);
 }
 
 .single_store_main_card figure img {
@@ -2397,13 +2398,13 @@ a.alphabet.all_alphabet {
 }
 
 .exp_coupon_content h4 {
-    font-size: 22px;
+    font-size: clamp(20px, 2.5vw, 22px);
     font-family: var(--font-500);
 }
 
 .exp_coupon_content p {
     color: gray;
-    font-size: 15px;
+    font-size: clamp(13px, 2.5vw, 15px);
 }
 
 .exp_coupon_content {
@@ -2437,7 +2438,7 @@ a.alphabet.all_alphabet {
     height: 35px;
     border-radius: 3px;
     font-weight: 600;
-    font-size: clamp(16px, 2.5vw, 18px);
+    font-size: clamp(14px, 2.5vw, 15px);
     display: flex;
     align-items: center;
     background: none;
@@ -2505,7 +2506,7 @@ a.alphabet.all_alphabet {
 }
 
 .nav_main ul li a {
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
     color: var(--white);
     position: relative;
     padding-bottom: 4px;
@@ -2597,7 +2598,7 @@ a.alphabet.all_alphabet {
     align-items: center;
     justify-content: center;
     color: var(--black);
-    font-size: 21px;
+    font-size: clamp(19px, 2.5vw, 21px);
     border-left: 2px solid #0001;
     margin-left: auto;
 }
@@ -2672,8 +2673,8 @@ a.alphabet.all_alphabet {
 }
 
 .free_delivery .icon {
-    font-size: 17px;
-    color: var(--secondary-300);
+    color: white;
+    font-size: clamp(18px, 2.5vw, 20px);
 }
 
 .free_delivery span {
@@ -2796,7 +2797,7 @@ a.alphabet.all_alphabet {
 }
 
 .main_category_content h4 {
-    font-size: 25px;
+    font-size: clamp(23px, 2.5vw, 25px);
     color: var(--white);
     font-family: var(--font-500);
 }
@@ -2807,7 +2808,7 @@ a.alphabet.all_alphabet {
 
 .main_category_content span {
     color: var(--secondary-100);
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
 }
 
 .main_category .theme_btn.store_btn {
@@ -2856,7 +2857,7 @@ a.alphabet.all_alphabet {
 .header_result>h4 {
     background: white;
     padding: 7px;
-    font-size: 20px;
+    font-size: clamp(18px, 2.5vw, 20px);
     font-family: var(--font-500);
 }
 
@@ -2898,12 +2899,12 @@ a.alphabet.all_alphabet {
 }
 
 .hero_store_main>h4 {
-    font-size: 28px;
+
     font-family: var(--font-500);
 }
 
 .hero_store_main>p {
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
 }
 
 .hero_store_card_wrapper .swiper-slide {
@@ -2919,7 +2920,7 @@ a.alphabet.all_alphabet {
     margin: 0;
     border-radius: 5px;
     color: white;
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
 }
 
 .swiper_hero_store_main {
@@ -2975,7 +2976,7 @@ a.alphabet.all_alphabet {
     background: var(--primary-100);
     margin: 0;
     color: white;
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
     flex: 1;
 }
 
@@ -3002,11 +3003,11 @@ a.alphabet.all_alphabet {
 }
 
 .hero_coupon_wrapper .swiper-pagination .swiper-pagination-bullet-active {
-    width: 60px !important;
+    width: 35px !important;
 }
 
 .hero_coupon_wrapper .swiper-pagination .swiper-pagination-bullet {
-    width: 20px;
+    width: 15px;
     border-radius: 5px;
     height: 4px;
     background: var(--primary-50);
